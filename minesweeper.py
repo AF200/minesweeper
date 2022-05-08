@@ -40,7 +40,7 @@ class Cell:
         btn.bind('<Button-3>', self.right_click_actions) #right click
         self.cell_btn_object = btn
 
-    @staticmethod #usage case of the class and not the instance Python OOP Introduction of him
+    @staticmethod
     def create_cell_label(location):
         lbl = Label(
             location,
@@ -60,7 +60,7 @@ class Cell:
             self.show_cell()
             if Cell.cell_count == 0:
                 Cell.cell_count_label_object.configure(
-                    text=f"Congratulations!!! \nGame ended"
+                    text=f"Congratulations!!!\nGame ended"
                     )
 
     def get_cell_by_axis(self,x,y):
@@ -188,7 +188,6 @@ for x in range(GRID):
         c.cell_btn_object.grid(
         column=x, row=y
         )
-#print(Cell.all)
 
 Cell.create_cell_label(left_frame)
 Cell.cell_count_label_object.place(
@@ -197,10 +196,5 @@ Cell.cell_count_label_object.place(
 
 Cell.randomize_mines()
 
-
-
 # Run the window
 root.mainloop()
-
- #video timestamp: 58:38
-#python game develeopment project using OOP. Minesweeper tutorial from FreeCodeCamp.org
